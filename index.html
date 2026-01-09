@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udara | Game Dev & UI/UX Portfolio</title>
+    <meta name="description"
+        content="Portfolio of a Game Developer and UI/UX Designer specialized in creating immersive digital experiences.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Placeholder for FontAwesome, might need actual CDN if this breaks, but standard kit usually works or we use SVGs -->
+    <!-- Using a reliable CDN for icons instead to ensure immediate rendering -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="background-globes">
+        <div class="globe globe-1"></div>
+        <div class="globe globe-2"></div>
+        <div class="globe globe-3"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="logo">Udara<span class="accent">.dev</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#goals">Goals</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <header id="hero" class="section hero">
+        <div class="container hero-content">
+            <div class="hero-text fade-in-up">
+                <h3>Hello, I'm</h3>
+                <h1>Udara</h1>
+                <h2 class="typing-effect">Game Developer & <span class="gradient-text">UI/UX Designer</span></h2>
+                <p>Crafting immersive worlds and intuitive interfaces. Specialized in Unity, C#, and User-Centric
+                    Design.</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View My Work</a>
+                    <a href="#contact" class="btn secondary">Contact Me</a>
+                </div>
+                <div class="cv-buttons" style="margin-top: 1.5rem;">
+                    <a href="#" class="btn secondary" style="margin-left: 0;"><i class="fas fa-eye"></i> View CV</a>
+                    <a href="#" class="btn secondary"><i class="fas fa-download"></i> Download CV</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in-up delay-200">
+                <div class="img-wrapper">
+                    <img src="assets/profile_1.jpg" alt="Udara - Game Developer">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About <span class="accent">Me</span></h2>
+            <div class="about-content fade-in-up">
+                <p>
+                    I am a passionate university student exploring the intersection of technology and creativity.
+                    With a strong foundation in <span class="highlight">Game Development</span> and a keen eye for <span
+                        class="highlight">UI/UX Design</span>,
+                    I strive to build experiences that are not only functional but also emotionally engaging.
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-card glass-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Developer</h3>
+                        <p>Clean, efficient code logic.</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <i class="fas fa-paint-brush"></i>
+                        <h3>Designer</h3>
+                        <p>Pixel-perfect user interfaces.</p>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Gamer</h3>
+                        <p>Understanding player psychology.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">My <span class="accent">Skills</span></h2>
+            <div class="skills-grid">
+                <!-- Development -->
+                <div class="skill-category glass-card fade-in-up">
+                    <h3>Development</h3>
+                    <div class="tags">
+                        <span class="tag"><i class="fas fa-code"></i> C#</span>
+                        <span class="tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tag"><i class="fab fa-php"></i> PHP</span>
+                        <span class="tag"><i class="fas fa-code"></i> C</span>
+                    </div>
+                </div>
+                <!-- Web & Frontend -->
+                <div class="skill-category glass-card fade-in-up delay-100">
+                    <h3>Web & Frontend</h3>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                    </div>
+                </div>
+                <!-- Game Dev -->
+                <div class="skill-category glass-card fade-in-up">
+                    <h3>Game Dev</h3>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-unity"></i> Unity Engine</span>
+                    </div>
+                </div>
+                <!-- Design -->
+                <div class="skill-category glass-card fade-in-up delay-100">
+                    <h3>Design</h3>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-figma"></i> Figma</span>
+                        <span class="tag"><i class="fas fa-image"></i> Adobe Photoshop</span>
+                        <span class="tag"><i class="fas fa-pen-fancy"></i> Canva</span>
+                    </div>
+                </div>
+                <!-- Tools -->
+                <div class="skill-category glass-card fade-in-up delay-200">
+                    <h3>Tools</h3>
+                    <div class="tags">
+                        <span class="tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="tag"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="tag"><i class="fas fa-terminal"></i> VS Code</span>
+                        <span class="tag"><i class="fas fa-laptop-code"></i> Visual Studio</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+            <div class="projects-grid">
+                <article class="project-card glass-card fade-in-up">
+                    <div class="project-img-placeholder gradient-1"></div>
+                    <div class="project-info">
+                        <h3>Cosmic Explorer</h3>
+                        <p class="role">Game Dev & Design</p>
+                        <p>A 3D space exploration game built with Unity. Features procedural planet generation.</p>
+                        <div class="project-links">
+                            <a href="#" class="link">View Source <i class="fab fa-github"></i></a>
+                            <a href="#" class="link">Play Demo <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card glass-card fade-in-up delay-100">
+                    <div class="project-img-placeholder gradient-2"></div>
+                    <div class="project-info">
+                        <h3>E-Commerce UI Kit</h3>
+                        <p class="role">UI/UX Design</p>
+                        <p>A comprehensive mobile app UI kit for modern shopping experiences, designed in Figma.</p>
+                        <div class="project-links">
+                            <a href="#" class="link">View Case Study <i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+                </article>
+                <article class="project-card glass-card fade-in-up delay-200">
+                    <div class="project-img-placeholder gradient-3"></div>
+                    <div class="project-info">
+                        <h3>Dungeon Crawler</h3>
+                        <p class="role">Game Logic Programming</p>
+                        <p>A 2D roguelike game focused on complex enemy AI and procedural level layout.</p>
+                        <div class="project-links">
+                            <a href="#" class="link">View Source <i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="goals" class="section goals">
+        <div class="container">
+            <h2 class="section-title">Future <span class="accent">Goals</span></h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card">
+                        <h3>Current</h3>
+                        <p>Mastering Advanced Unity patterns and Shader Graph.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up delay-100">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card">
+                        <h3>Near Term</h3>
+                        <p>Release my first commercial indie game on Steam.</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in-up delay-200">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card">
+                        <h3>Long Term</h3>
+                        <p>Become a Lead Game Designer at a major studio or found my own indie studio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contact <span class="accent">Me</span></h2>
+            <div class="contact-wrapper glass-card fade-in-up">
+                <p>Have a project in mind or just want to chat about games? Drop me a message.</p>
+                <form class="contact-form">
+                    <div class="input-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary full-width">Send Message</button>
+                </form>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Discord"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Udara. All rights reserved. Built with passion.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
