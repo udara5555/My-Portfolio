@@ -282,7 +282,7 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: 35% 70%;
     transform: scale(1.3) scaleX(-1);
 }
 
@@ -370,7 +370,7 @@ h3 {
 /* Projects */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -379,9 +379,11 @@ h3 {
     overflow: hidden;
 }
 
-.project-img-placeholder {
+.project-img {
     height: 180px;
     width: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .gradient-1 {
@@ -565,6 +567,10 @@ footer {
     }
 
     .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 
