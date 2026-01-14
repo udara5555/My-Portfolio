@@ -71,3 +71,51 @@ animatedElements.forEach(el => observer.observe(el));
 // Note: CSS simple typing is often better, but for specific word cycling JS is good.
 // Currently the HTML has a static gradient text. We can add a simple cursor blink if needed,
 // but the current design is clean.
+
+// Video Modal Logic
+const modal = document.getElementById('video-modal');
+const videoPlayer = document.getElementById('demo-video');
+const videoSource = videoPlayer.querySelector('source');
+const playButtons = document.querySelectorAll('.play-demo-btn');
+const closeBtn = document.querySelector('.close-modal');
+
+playButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const videoFile = btn.getAttribute('data-video');
+
+        if (videoFile) {
+            // Update video source
+            videoSource.src = videoFile;
+            videoPlayer.load(); // Reload video with new source
+
+            // Show modal
+            modal.style.display = 'flex';
+            // slight delay to allow display flex to apply before opacity transition
+            setTimeout(() => {
+                modal.classList.add('show');
+                videoPlayer.play();
+            }, 10);
+        }
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    closeModal();
+});
+
+// Close when clicking outside content
+window.addEventListener('click', (e) => {
+    if (e.target === modal) {
+        closeModal();
+    }
+});
+
+function closeModal() {
+    modal.classList.remove('show');
+    videoPlayer.pause();
+    setTimeout(() => {
+        modal.style.display = 'none';
+        videoSource.src = ""; // Reset source
+    }, 500); // Wait for transition
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
 :root {
     --bg-color: #050505;
     --text-primary: #ffffff;
@@ -143,7 +145,7 @@ h3 {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.5rem 2rem;
+    padding: 0.8rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -169,10 +171,41 @@ h3 {
 }
 
 /* Navigation */
+/* Add to top of file (I will do this via separate edit if needed, but for now I'll just change the logo class and assume I can add the import or use a web safe one, but user wants suitable font. I'll add the import to the top of style.css in a separate call or just trust standard font stack? No, better add import.) */
+/* Actually, I can replace the whole .logo block */
 .logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: -1px;
+    font-family: 'Agency FB', sans-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    /* Pixel fonts usually don't need heavy weights */
+    letter-spacing: 1px;
+    /* text-transform: uppercase; REMOVED to allow lowercase 'exe' */
+    background: linear-gradient(to right, #fff, var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    /* Increased gap for pixel font spacing */
+}
+
+.logo .accent {
+    font-size: 0.7em;
+    display: inline-block;
+    transform: rotate(45deg);
+    color: initial;
+    /* Emoji color */
+    -webkit-background-clip: border-box;
+    background-clip: border-box;
+    /* Adding text shadow as outline */
+    text-shadow:
+        -1px -1px 0 rgba(255, 255, 255, 0.5),
+        1px -1px 0 rgba(255, 255, 255, 0.5),
+        -1px 1px 0 rgba(255, 255, 255, 0.5),
+        1px 1px 0 rgba(255, 255, 255, 0.5);
+    /* Restore text fill for emoji */
+    -webkit-text-fill-color: initial;
 }
 
 .nav-links {
@@ -595,5 +628,89 @@ footer {
 
     .nav-links.active {
         transform: translateY(0);
+    }
+}
+
+/* Video Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: transparent;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    max-width: 900px;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    color: #fff;
+    position: absolute;
+    top: -40px;
+    right: 0;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: var(--accent-color);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+    }
+
+    .close-modal {
+        top: -35px;
+        right: 5px;
     }
 }
