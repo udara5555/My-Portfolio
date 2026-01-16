@@ -714,3 +714,16 @@ footer {
         right: 5px;
     }
 }
+
+/* Background Canvas */
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    /* Behind globes (-1) or replace them? User said add dynamic element. Let's put it behind content but maybe front of globes or same layer? Globes are -1. Let's make this -1 and globes -2? Or just mix. Let's put canvas at -1. */
+    z-index: -1;
+    pointer-events: none;
+}
