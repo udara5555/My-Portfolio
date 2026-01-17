@@ -727,3 +727,25 @@ footer {
     z-index: -1;
     pointer-events: none;
 }
+
+/* Contact Form Status */
+#contact-status {
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: 500;
+    min-height: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#contact-status.show {
+    opacity: 1;
+}
+
+#contact-status.success {
+    color: #4cd964;
+}
+
+#contact-status.error {
+    color: #ff3b30;
+}

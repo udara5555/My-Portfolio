@@ -248,17 +248,18 @@
             <h2 class="section-title">Contact <span class="accent">Me</span></h2>
             <div class="contact-wrapper glass-card fade-in-up">
                 <p>Have a project in mind or just want to chat about games? Drop me a message.</p>
-                <form class="contact-form">
+                <form id="contact-form" class="contact-form" action="https://formspree.io/f/mbdddzre" method="POST">
                     <div class="input-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <input type="text" name="name" placeholder="Your Name" required>
                     </div>
                     <div class="input-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
                     </div>
                     <div class="input-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
                     </div>
                     <button type="submit" class="btn primary full-width">Send Message</button>
+                    <p id="contact-status"></p>
                 </form>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/in/udara-chathuranga-154a55321/" target="_blank"

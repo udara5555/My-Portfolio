@@ -197,3 +197,52 @@ function animateParticles() {
 
 initParticles();
 animateParticles();
+
+// AJAX Contact Form
+const contactForm = document.getElementById('contact-form');
+const contactStatus = document.getElementById('contact-status');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const btn = contactForm.querySelector('button');
+        const originalBtnText = btn.innerText;
+
+        btn.innerText = 'Sending...';
+        btn.disabled = true;
+        contactStatus.className = '';
+        contactStatus.classList.remove('show');
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch(contactForm.action, {
+                method: contactForm.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                contactStatus.innerHTML = "Thanks for your message! I'll get back to you soon.";
+                contactStatus.className = "success show";
+                contactForm.reset();
+            } else {
+                const data = await response.json();
+                if (Object.hasOwnProperty.call(data, 'errors')) {
+                    contactStatus.innerHTML = data.errors.map(error => error["message"]).join(", ");
+                } else {
+                    contactStatus.innerHTML = "Oops! There was a problem submitting your form";
+                }
+                contactStatus.className = "error show";
+            }
+        } catch (error) {
+            contactStatus.innerHTML = "Oops! There was a problem submitting your form";
+            contactStatus.className = "error show";
+        } finally {
+            btn.innerText = originalBtnText;
+            btn.disabled = false;
+        }
+    });
+}
