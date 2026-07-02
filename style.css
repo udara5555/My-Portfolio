@@ -572,6 +572,18 @@ footer {
     transition-delay: 0.2s;
 }
 
+.delay-300 {
+    transition-delay: 0.3s;
+}
+
+.delay-400 {
+    transition-delay: 0.4s;
+}
+
+.delay-500 {
+    transition-delay: 0.5s;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
     .hero {
